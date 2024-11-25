@@ -18,8 +18,8 @@ public class BasicOpModePractice extends LinearOpMode {
     Pose2d poseUpdate=new Pose2d();
     Lift lift;
 
-//    GamepadEx gamepad1Ex=new GamepadEx(gamepad1);
-//    GamepadEx gamepad2Ex=new GamepadEx(gamepad2);
+    GamepadEx gamepad1Ex;
+    GamepadEx gamepad2Ex;
 
 
     Globals.driverState driveState= Globals.driverState.DRIVER_CONTROLLED;
@@ -36,6 +36,9 @@ public class BasicOpModePractice extends LinearOpMode {
             }
             lift= new Lift(hardwareMap, Globals.liftLeftMName, Globals.liftRightMName, Globals.slidekP,Globals.slidekI,Globals.slidekD,Globals.slidekF, 5.0);
             lift.set_new_target_pos(20);
+
+            gamepad1Ex=new GamepadEx(gamepad1);
+            gamepad2Ex=new GamepadEx(gamepad2);
 
         }
         waitForStart();
