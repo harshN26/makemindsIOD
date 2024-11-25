@@ -3,12 +3,20 @@ package org.firstinspires.ftc.teamcode;
 import com.ThermalEquilibrium.homeostasis.Parameters.PIDCoefficientsEx;
 import com.acmerobotics.dashboard.config.Config;
 import com.acmerobotics.roadrunner.geometry.Pose2d;
+import com.arcrobotics.ftclib.controller.PIDFController;
+import com.qualcomm.robotcore.hardware.PIDFCoefficients;
 
 //TODO: Update all values, etc. THIS IS THE MOST IMPORTANT CLASS
 @Config
 public class Globals {
-    public static PIDCoefficientsEx slide1Coeffs=new PIDCoefficientsEx(0.1,0,0,0,0,0);
-    //    public static PIDCoefficients slide1CoeffsBasic=new PIDCoefficients(0.1,0,0);
+
+
+    //TODO:Do f, then do p, then d, understand what each constant does. I is lowk not that important for FTC so do that last
+    public static double slidekP=0.0;
+    public static double slidekI=0.0;
+    public static double slidekD=0.0;
+    public static double slidekF=0.0;
+
     public static double lift1TargetPos;
 
     public static double lift1PosSave;

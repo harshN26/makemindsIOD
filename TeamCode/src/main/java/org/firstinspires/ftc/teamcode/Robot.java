@@ -32,7 +32,7 @@ public class Robot {
 
 
         Globals.lift1TargetPos=Globals.lift1InitPos;
-        lift=new Lift(hardwareMap,Globals.liftLeftMName,Globals.liftRightMName,Globals.slide1Coeffs,10);
+        lift=new Lift(hardwareMap,Globals.liftLeftMName,Globals.liftRightMName,Globals.slidekP,Globals.slidekI,Globals.slidekD,Globals.slidekF,10);
         lift.set_new_target_pos(Globals.lift1InitPos);
 
         intake=new Intake(hardwareMap,Globals.inSlideName,Globals.inWristName,Globals.inClawName);

@@ -34,7 +34,7 @@ public class BasicOpModePractice extends LinearOpMode {
                 poseUpdate = new Pose2d(0,0);
 //                drive.setPoseEstimate(poseUpdate);
             }
-            lift= new Lift(hardwareMap, Globals.liftLeftMName, Globals.liftRightMName, Globals.slide1Coeffs, 5.0);
+            lift= new Lift(hardwareMap, Globals.liftLeftMName, Globals.liftRightMName, Globals.slidekP,Globals.slidekI,Globals.slidekD,Globals.slidekF, 5.0);
             lift.set_new_target_pos(20);
 
         }
